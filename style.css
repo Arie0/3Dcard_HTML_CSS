@@ -62,27 +62,30 @@ body {
 }
 .wrapper::after{
     bottom: 0;
-    opacity:0;
+    opacity: 1;
     background-image: linear-gradient(to bottom , transparent 46%, rgb(12,13,19,0.5) 68%, rgb (12,13,19) 97%);
 
 }
 
 .title {
-    width: 100%;
+    width: 30%;
     transition: transform 0.5s;
 }
 
 .character {
     width: 100%;
-    opacity: 0;
+    opacity: -1;
     position: absolute;
     z-index: -1;
     transition: all 0.5s;
+    transform: translate3d(10%, 0%, 150px);
+
+   
 }
 
 .card:hover  .wrapper {
     transform: perspective(900px) translateY(-5%)  rotateX(25deg) translateZ(0);
-    box-shadow: 0px 35px 32px -8px rgb(0,0,0,0.75);
+    box-shadow: 0px 35px 32px 8px rgb(0,0,0,0.75);
 }
 
 .card:hover .title {
